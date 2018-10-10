@@ -54,3 +54,167 @@ body {
     letter-spacing: .1rem;
     color: #fff;
     font-weight: 300; }
+
+.main {
+  display: grid;
+  grid-template-rows: 60vh 35vh;
+  grid-template-columns: minmax(6rem, 0.5fr) [center-start] repeat(12, minmax(min-content, 11rem)) [center-end] minmax(6rem, 0.5fr); }
+
+.hero {
+  grid-column: 1 / -1; }
+
+.banner {
+  grid-column: 1 / -1; }
+
+.showcase {
+  grid-column: center-start / center-end; }
+
+.hero {
+  background-image: url(../img/hero-text.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative; }
+
+.banner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr; }
+  .banner__quote-area {
+    background-color: #f7f7f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: -1; }
+    .banner__quote-area::before {
+      content: "\201D";
+      position: absolute;
+      top: -7.1rem;
+      right: 0rem;
+      line-height: 1;
+      font-size: 70rem;
+      font-family: sans-serif;
+      color: rgba(63, 50, 80, 0.5);
+      z-index: 1; }
+  .banner__quote {
+    font-size: 4.2rem;
+    width: 65%;
+    margin-left: 8rem;
+    font-family: "Montserrat", sans-serif;
+    z-index: 10; }
+    .banner__quote--subtext-box {
+      color: #0e0b11;
+      display: flex;
+      margin-left: 8rem;
+      font-family: "Montserrat", sans-serif;
+      margin-top: 2.5rem; }
+    .banner__quote--author {
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      color: #e14658;
+      font-weight: 500;
+      letter-spacing: .1rem; }
+    .banner__quote--role {
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      letter-spacing: .1rem; }
+  .banner__about {
+    background-image: linear-gradient(to right bottom, rgba(225, 70, 88, 0.8), rgba(225, 70, 88, 0.8)), url(../img/about-bg.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    -webkit-font-smoothing: antialiased; }
+    .banner__about--text-box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center; }
+    .banner__about--title {
+      font-size: 4rem;
+      letter-spacing: .1rem;
+      color: #fff; }
+    .banner__about--subtitle {
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      letter-spacing: .1rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.7);
+      margin-top: 1rem; }
+  .banner__stats {
+    background-color: #3f3250;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    -webkit-font-smoothing: antialiased; }
+  .banner__stat {
+    text-align: center; }
+    .banner__stat--figure {
+      font-size: 4.5rem;
+      font-weight: 200;
+      color: #fff; }
+    .banner__stat--title {
+      color: #fff;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      font-weight: 300;
+      margin-top: 2rem; }
+
+.showcase__header {
+  font-size: 4.6rem;
+  text-align: center;
+  margin-top: 15rem;
+  line-height: 1.1; }
+
+.showcase__subheading {
+  font-size: 1.8rem;
+  text-align: center;
+  color: rgba(14, 11, 17, 0.5);
+  line-height: 1.6;
+  font-style: italic;
+  margin: 3rem auto 7rem auto;
+  width: 60%; }
+
+.showcase__gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem; }
+  .showcase__gallery--item {
+    overflow: hidden; }
+  .showcase__gallery--img {
+    width: 100%;
+    transition: 0.2s ease; }
+    .showcase__gallery--img:hover {
+      transform: scale(1.05); }
+
+.showcase__quote-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  border-left: 2px solid #0e0b11;
+  padding: 1rem 0;
+  margin: 7rem 0 15rem; }
+
+.showcase__quote {
+  font-size: 4.2rem;
+  width: 50%;
+  font-family: "Montserrat", sans-serif;
+  margin-left: 4rem; }
+  .showcase__quote--subtext-box {
+    color: #0e0b11;
+    display: flex;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 2.5rem;
+    margin-left: 4rem; }
+  .showcase__quote--author {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: #e14658;
+    font-weight: 500;
+    letter-spacing: .1rem; }
+  .showcase__quote--role {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem; }

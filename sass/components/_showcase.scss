@@ -1,0 +1,77 @@
+.showcase {
+
+    &__header {
+        font-size: 4.6rem;
+        text-align: center;
+        margin-top: 15rem;
+        line-height: 1.1;
+    }
+
+    &__subheading {
+        font-size: 1.8rem;
+        text-align: center;
+        color: rgba($color-black, .5);
+        line-height: 1.6;
+        font-style: italic;
+        margin: 3rem auto 7rem auto;
+        width: 60%;
+    }
+
+    &__gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 3rem;
+
+        &--item {
+            overflow: hidden;
+        }
+
+        &--img {
+            width: 100%;
+            transition: 0.2s ease;
+            
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    &__quote-area {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        border-left: 2px solid $color-black;
+        padding: 1rem 0;
+        margin: 7rem 0 15rem;
+    }
+
+    &__quote {
+        font-size: 4.2rem;
+        width: 50%;
+        font-family: $font-montserrat;
+        margin-left: 4rem;
+
+        &--subtext-box {
+            color: $color-black;
+            display: flex;
+            font-family: $font-montserrat;
+            margin-top: 2.5rem;
+            margin-left: 4rem;
+        }
+
+        &--author {
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            color: $color-secondary;
+            font-weight: 500;
+            letter-spacing: .1rem;
+        }
+
+        &--role {
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: .1rem;
+        }
+    }
+}

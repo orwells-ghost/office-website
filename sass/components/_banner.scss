@@ -1,0 +1,117 @@
+.banner {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+
+    &__quote-area {
+        background-color: $color-off-white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        z-index: -1;
+
+        &::before {
+            content: "\201D";
+            position: absolute;
+            top: -7.1rem;
+            right: 0rem;
+            line-height: 1;
+            font-size: 70rem;
+            font-family: sans-serif;
+            color: rgba($color-primary, .5);
+            z-index: 1;
+        }
+    }
+
+    &__quote {
+        font-size: 4.2rem;
+        width: 65%;
+        margin-left: 8rem;
+        font-family: $font-montserrat;
+        z-index: 10;
+
+        &--subtext-box {
+            color: $color-black;
+            display: flex;
+            margin-left: 8rem;
+            font-family: $font-montserrat;
+            margin-top: 2.5rem;
+        }
+
+        &--author {
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            color: $color-secondary;
+            font-weight: 500;
+            letter-spacing: .1rem;
+        }
+
+        &--role {
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: .1rem;
+        }
+    }
+
+    &__about {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($color-secondary, 0.8),
+            rgba($color-secondary, 0.8)),
+        url(../img/about-bg.jpg);
+        background-size: cover;
+        background-position: top;
+        position: relative;
+        -webkit-font-smoothing: antialiased;
+
+        &--text-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        &--title {
+            font-size: 4rem;
+            letter-spacing: .1rem;
+            color: $color-white;
+        }
+
+        &--subtitle {
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: .1rem;
+            font-weight: 600;
+            color: rgba($color-white, .7);
+            margin-top: 1rem;
+        }
+    }
+
+    &__stats {
+        background-color: $color-primary;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        align-items: center;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    &__stat {
+        text-align: center;
+        &--figure {
+            font-size: 4.5rem;
+            font-weight: 200;
+            color: $color-white;
+        }
+
+        &--title {
+            color: $color-white;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            font-weight: 300;
+            margin-top: 2rem;
+        }
+    }
+}

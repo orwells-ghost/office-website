@@ -1,0 +1,17 @@
+.main {
+    display: grid;
+    grid-template-rows: 60vh 35vh;
+    grid-template-columns: minmax(6rem, .5fr) [center-start] repeat(12, minmax(min-content, 11rem)) [center-end] minmax(6rem, .5fr);
+}
+
+.hero {
+    grid-column: 1 / -1;
+}
+
+.banner {
+    grid-column: 1 / -1;
+}
+
+.showcase {
+    grid-column: center-start / center-end;
+}

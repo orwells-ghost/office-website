@@ -1,20 +1,11 @@
 .showcase {
+    display: grid;
 
     &__header {
-        font-size: 4.6rem;
-        text-align: center;
-        margin-top: 15rem;
-        line-height: 1.1;
+        justify-self: center;
     }
 
     &__subheading {
-        font-size: 1.8rem;
-        text-align: center;
-        color: rgba($color-black, .5);
-        line-height: 1.6;
-        font-style: italic;
-        margin: 3rem auto 7rem auto;
-        width: 60%;
     }
 
     &__gallery {

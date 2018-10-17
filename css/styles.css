@@ -12,6 +12,21 @@ html {
 body {
   font-family: "Open Sans", sans-serif; }
 
+.heading-2 {
+  font-size: 4.6rem;
+  margin-top: 12rem;
+  line-height: 1.1;
+  justify-self: center; }
+
+.subheading {
+  font-size: 1.8rem;
+  text-align: center;
+  color: rgba(14, 11, 17, 0.5);
+  line-height: 1.6;
+  font-style: italic;
+  margin: 3rem auto 7rem auto;
+  width: 60%; }
+
 .header {
   display: flex;
   font-family: "Montserrat", sans-serif;
@@ -57,17 +72,29 @@ body {
 
 .main {
   display: grid;
-  grid-template-rows: 60vh 35vh;
-  grid-template-columns: minmax(6rem, 0.5fr) [center-start] repeat(12, minmax(min-content, 11rem)) [center-end] minmax(6rem, 0.5fr); }
+  grid-template-rows: 60vh 35vh min-content min-content;
+  grid-template-columns: [full-start] minmax(6rem, 0.5fr) [center-start] repeat(12, minmax(min-content, 11rem)) [center-end] minmax(6rem, 0.5fr) [full-end]; }
 
 .hero {
-  grid-column: 1 / -1; }
+  grid-column: full-start / full-end; }
 
 .banner {
-  grid-column: 1 / -1; }
+  grid-column: full-start / full-end; }
 
 .showcase {
   grid-column: center-start / center-end; }
+
+.testimonial {
+  grid-column: full-start / full-end; }
+
+.pricing {
+  grid-column: center-start / center-end; }
+  .pricing__header {
+    text-align: center; }
+  .pricing__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem; }
 
 .hero {
   background-image: url(../img/hero-text.jpg);
@@ -161,60 +188,132 @@ body {
       font-weight: 300;
       margin-top: 2rem; }
 
-.showcase__header {
-  font-size: 4.6rem;
-  text-align: center;
-  margin-top: 15rem;
-  line-height: 1.1; }
-
-.showcase__subheading {
-  font-size: 1.8rem;
-  text-align: center;
-  color: rgba(14, 11, 17, 0.5);
-  line-height: 1.6;
-  font-style: italic;
-  margin: 3rem auto 7rem auto;
-  width: 60%; }
-
-.showcase__gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 3rem; }
-  .showcase__gallery--item {
-    overflow: hidden; }
-  .showcase__gallery--img {
-    width: 100%;
-    transition: 0.2s ease; }
-    .showcase__gallery--img:hover {
-      transform: scale(1.05); }
-
-.showcase__quote-area {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  border-left: 2px solid #0e0b11;
-  padding: 1rem 0;
-  margin: 7rem 0 15rem; }
-
-.showcase__quote {
-  font-size: 4.2rem;
-  width: 50%;
-  font-family: "Montserrat", sans-serif;
-  margin-left: 4rem; }
-  .showcase__quote--subtext-box {
-    color: #0e0b11;
+.showcase {
+  display: grid; }
+  .showcase__header {
+    justify-self: center; }
+  .showcase__gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem; }
+    .showcase__gallery--item {
+      overflow: hidden; }
+    .showcase__gallery--img {
+      width: 100%;
+      transition: 0.2s ease; }
+      .showcase__gallery--img:hover {
+        transform: scale(1.05); }
+  .showcase__quote-area {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    border-left: 2px solid #0e0b11;
+    padding: 1rem 0;
+    margin: 7rem 0 15rem; }
+  .showcase__quote {
+    font-size: 4.2rem;
+    width: 50%;
     font-family: "Montserrat", sans-serif;
-    margin-top: 2.5rem;
     margin-left: 4rem; }
-  .showcase__quote--author {
-    font-size: 1.3rem;
+    .showcase__quote--subtext-box {
+      color: #0e0b11;
+      display: flex;
+      font-family: "Montserrat", sans-serif;
+      margin-top: 2.5rem;
+      margin-left: 4rem; }
+    .showcase__quote--author {
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      color: #e14658;
+      font-weight: 500;
+      letter-spacing: .1rem; }
+    .showcase__quote--role {
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      letter-spacing: .1rem; }
+
+.testimonial {
+  background-image: linear-gradient(to right bottom, rgba(63, 50, 80, 0.8), rgba(63, 50, 80, 0.8)), url(../img/testimonial-bg.jpg);
+  background-size: cover;
+  background-position: top;
+  text-align: center;
+  display: grid;
+  grid-template-columns: minmax(6rem, 0.5fr) [center-start] repeat(12, minmax(min-content, 11rem)) [center-end] minmax(6rem, 0.5fr); }
+  .testimonial__text-box {
+    grid-column: center-start / center-end;
+    display: grid;
+    margin: 10rem 0;
+    text-align: center; }
+  .testimonial__img-box {
+    width: 15rem;
+    border-radius: 50%;
+    justify-self: center; }
+  .testimonial__img {
+    width: 100%;
+    border-radius: 50%; }
+  .testimonial__text {
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 300;
+    line-height: 1.5;
+    font-style: italic;
+    width: 80%;
+    justify-self: center;
+    margin-top: 3rem; }
+  .testimonial__person {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.5);
     text-transform: uppercase;
-    color: #e14658;
-    font-weight: 500;
-    letter-spacing: .1rem; }
-  .showcase__quote--role {
-    font-size: 1.3rem;
+    letter-spacing: .1rem;
+    margin-top: 2.5rem; }
+
+.card {
+  background: rgba(63, 50, 80, 0.1);
+  margin-bottom: 10rem;
+  display: flex;
+  flex-direction: column; }
+  .card__img {
+    width: 100%; }
+  .card__title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.8rem;
+    text-align: center;
+    margin-top: 4rem; }
+  .card__price {
+    font-size: 7rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    text-align: center; }
+    .card__price sup {
+      color: #e14658;
+      font-size: 3rem; }
+    .card__price--subtitle {
+      font-size: 1.6rem;
+      font-style: italic;
+      margin-top: -1rem;
+      color: rgba(14, 11, 17, 0.65);
+      text-align: center; }
+  .card__list {
+    list-style: none;
+    display: table;
+    margin: 3rem auto; }
+  .card__perk i {
+    font-size: 1.6rem; }
+  .card__perk span {
+    font-size: 1.6rem;
+    color: rgba(14, 11, 17, 0.5);
+    margin-left: 2rem; }
+  .card__perk:first-child span {
+    color: #0e0b11; }
+  .card__perk:not(:first-child) {
+    margin-top: 1rem; }
+  .card__btn {
+    display: inline-block;
     text-transform: uppercase;
+    padding: 2.5rem 7.5rem;
+    margin: 0 auto 5rem;
+    background-color: #e14658;
+    font-size: 1.4rem;
+    color: #fff;
     letter-spacing: .1rem; }

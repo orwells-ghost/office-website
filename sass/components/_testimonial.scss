@@ -1,0 +1,50 @@
+.testimonial {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary, 0.8),
+        rgba($color-primary, 0.8)),
+    url(../img/testimonial-bg.jpg);
+    background-size: cover;
+    background-position: top;
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: minmax(6rem, .5fr) [center-start] repeat(12, minmax(min-content, 11rem)) [center-end] minmax(6rem, .5fr);
+
+    &__text-box {
+        grid-column: center-start / center-end;
+        display: grid;
+        margin: 10rem 0;
+        text-align: center;
+    }
+
+    &__img-box {
+        width: 15rem;
+        border-radius: 50%;
+        justify-self: center;
+    }
+
+    &__img {
+        width: 100%;
+        border-radius: 50%;
+    }
+
+    &__text {
+        font-size: 1.8rem;
+        color: $color-white;
+        font-weight: 300;
+        line-height: 1.5;
+        font-style: italic;
+        width: 80%;
+        justify-self: center;
+        margin-top: 3rem;
+    }
+
+    &__person {
+        font-size: 1.4rem;
+        color: rgba($color-white, .5);
+        text-transform: uppercase;
+        letter-spacing: .1rem;
+        margin-top: 2.5rem;
+    }
+}

@@ -1,3 +1,20 @@
 body {
     font-family: $font-open-sans;
 }
+
+.heading-2 {
+    font-size: 4.6rem;
+    margin-top: 12rem;
+    line-height: 1.1;
+    justify-self: center;
+}
+
+.subheading {
+    font-size: 1.8rem;
+    text-align: center;
+    color: rgba($color-black, .5);
+    line-height: 1.6;
+    font-style: italic;
+    margin: 3rem auto 7rem auto;
+    width: 60%;
+}

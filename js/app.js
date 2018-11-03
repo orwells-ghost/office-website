@@ -10,7 +10,7 @@ const elements = {
   tSlides: Array.from(document.querySelectorAll('.testimonial__text-box')),
   tBtns: Array.from(document.querySelectorAll('.testimonial__dot'))
 }
-if (document.body.classList.contains('homepage')) {
+
   const incNums = el => {
     let upperLimit = parseInt(el.innerHTML, 10), lowerLimit = 0;
     el.textConent = '0';
@@ -44,7 +44,7 @@ if (document.body.classList.contains('homepage')) {
       }, 450);
     }, 350);
   }
-}
+
 
 elements.bannerNums.forEach(el => incNums(el));
 document.querySelector('.header__hamburger').addEventListener('click', event => {

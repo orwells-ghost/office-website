@@ -1,0 +1,80 @@
+.footer {
+
+    &__header {
+        text-align: center;
+
+        @media only screen and (max-width: $bp-small) {
+            padding: 0 2rem;
+        }
+    }
+
+    &__subheading {
+        width: 60%;
+
+        @media only screen and (max-width: $bp-large) {
+            width: 80%;
+        }
+    }
+
+    &__bottom {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($color-primary, 0.8),
+            rgba($color-primary, 0.8)),
+        url(../../img/footer-bg.jpg);
+        background-size: cover;
+        background-position: top;
+        height: 70rem;
+        margin-top: 20rem;
+        display: grid;
+        grid-template-columns: [full-start] minmax(6rem, .5fr) [center-start] repeat(12, minmax(min-content, 11rem)) [center-end] minmax(6rem, .5fr) [full-end];
+        position: relative;
+    }
+
+    &__map {
+        grid-column: center-start / center-end;
+        transform: translateY(-18%);
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-column: full-start / full-end;
+        }
+    }
+
+    &__other {
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    &__links {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    &__link {
+        margin-right: 2rem;
+        i {
+            color: $color-white;
+            font-size: 1.8rem;
+            transition: color .2s;
+        }
+
+        &:hover {
+            i {
+                color: $color-secondary;
+            }
+        }
+    }
+
+    &__text {
+        font-size: 1.6rem;
+        color: #90919f;
+    }
+}
+
+#map {
+    height: 85%;
+}

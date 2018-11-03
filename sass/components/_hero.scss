@@ -3,4 +3,11 @@
     background-size: cover;
     background-position: top;
     position: relative;
+
+    @media only screen and (max-width: $bp-small) {
+        background-image: url(../img/hero-text-small.jpg);
+        background-size: cover;
+        background-position: top;
+        position: relative;
+    }
 }

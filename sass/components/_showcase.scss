@@ -10,7 +10,7 @@
 
     &__gallery {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
         grid-gap: 3rem;
 
         &--item {
@@ -33,15 +33,38 @@
         justify-content: center;
         position: relative;
         border-left: 2px solid $color-black;
-        padding: 1rem 0;
+        padding: 3rem 0;
         margin: 7rem 0 15rem;
+        flex-wrap: nowrap;
+
+        @media only screen and (max-width: $bp-large) {
+            margin-bottom: 7rem;
+        }
     }
 
     &__quote {
         font-size: 4.2rem;
         width: 50%;
+
+        @media only screen and (max-width: $bp-very-large) {
+            width: 60%;
+        }
+        @media only screen and (max-width: $bp-large-middle) {
+            width: 67%;
+            font-size: 3.8rem;
+        }
+        @media only screen and (max-width: $bp-large) {
+            width: 90%;
+            font-size: 3.2rem;
+        }
+        @media only screen and (max-width: $bp-medium) {
+            width: 100%;
+            font-size: 2.9rem;
+        }
+        
         font-family: $font-montserrat;
         margin-left: 4rem;
+        margin-top: 0 !important;
 
         &--subtext-box {
             color: $color-black;

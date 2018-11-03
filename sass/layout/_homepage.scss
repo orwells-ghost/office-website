@@ -1,7 +1,11 @@
 .main {
     display: grid;
-    grid-template-rows: 60vh 35vh min-content min-content;
+    grid-template-rows: 60vh 35vh min-content 50rem repeat(3, min-content);
     grid-template-columns: [full-start] minmax(6rem, .5fr) [center-start] repeat(12, minmax(min-content, 11rem)) [center-end] minmax(6rem, .5fr) [full-end];
+
+    @media only screen and (max-width: $bp-largest) {
+        grid-template-rows: 50vh;
+    }
 }
 
 .hero {
@@ -29,7 +33,12 @@
 
     &__cards {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
         grid-gap: 3rem;
+        align-items: center;
     }
+}
+
+.footer {
+    grid-column: full-start / full-end;
 }

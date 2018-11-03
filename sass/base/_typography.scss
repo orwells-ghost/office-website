@@ -7,6 +7,10 @@ body {
     margin-top: 12rem;
     line-height: 1.1;
     justify-self: center;
+
+    @media only screen and (max-width: $bp-large) {
+        margin-top: 6rem;
+    }
 }
 
 .subheading {
@@ -17,4 +21,8 @@ body {
     font-style: italic;
     margin: 3rem auto 7rem auto;
     width: 60%;
+
+    @media only screen and (max-width: $bp-large) {
+        width: 80%;
+    }
 }

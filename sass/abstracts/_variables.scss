@@ -9,3 +9,14 @@ $color-off-white: #f7f7f9;
 // Fonts
 $font-montserrat: 'Montserrat', sans-serif;
 $font-open-sans: 'Open Sans', sans-serif;
+
+// Media Queries
+$bp-very-large: 84.375em; // 1,350px
+$bp-largest: 75em; // 1200px
+$bp-large-middle: 68.75em;
+$bp-large: 62.5em;
+$bp-medium-large: 56.25em; // 900px
+$bp-medium: 50em; // 800px
+$bp-medium-small: 43.75em; // 700px
+$bp-small: 37.5em; // 600px
+$bp-extra-small: 28.125em;

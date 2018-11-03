@@ -2,6 +2,15 @@
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
 
+    @media only screen and (max-width: $bp-largest) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 35vh);
+    }
+    @media only screen and (max-width: $bp-medium-small) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 25vh) 30vh;
+    }
+
     &__quote-area {
         background-color: $color-off-white;
         display: flex;
@@ -9,6 +18,10 @@
         justify-content: center;
         position: relative;
         z-index: -1;
+
+        @media only screen and (max-width: $bp-largest) {
+            grid-column: 1 / -1;
+        }
 
         &::before {
             content: "\201D";
@@ -20,15 +33,45 @@
             font-family: sans-serif;
             color: rgba($color-primary, .5);
             z-index: 1;
+
+            @media only screen and (max-width: $bp-large) {
+                font-size: 50rem;
+            }
         }
     }
 
     &__quote {
         font-size: 4.2rem;
         width: 65%;
+
+        @media only screen and (max-width: $bp-largest) {
+            width: 59%;
+        }
+        @media only screen and (max-width: $bp-large) {
+            width: 65%;
+            font-size: 3.2rem;
+        }
+        @media only screen and (max-width: $bp-medium-large) {
+            width: 74%;
+        }
+        @media only screen and (max-width: $bp-medium) {
+            width: 82%;
+            font-size: 2.9rem;
+        }
+        @media only screen and (max-width: $bp-medium-small) {
+            margin-left: 5rem;
+        }
+        @media only screen and (max-width: $bp-small) {
+            font-size: 2.5rem;
+        }
+        @media only screen and (max-width: $bp-extra-small) {
+            margin-left: 3rem;
+        }
+
         margin-left: 8rem;
         font-family: $font-montserrat;
         z-index: 10;
+        margin-top: 0 !important;
 
         &--subtext-box {
             color: $color-black;
@@ -36,6 +79,13 @@
             margin-left: 8rem;
             font-family: $font-montserrat;
             margin-top: 2.5rem;
+
+            @media only screen and (max-width: $bp-medium-small) {
+                margin-left: 5rem;
+            }
+            @media only screen and (max-width: $bp-extra-small) {
+                margin-left: 3rem;
+            }
         }
 
         &--author {
@@ -96,14 +146,23 @@
         justify-items: center;
         align-items: center;
         -webkit-font-smoothing: antialiased;
+
+        @media only screen and (max-width: $bp-medium-small) {
+            padding: 2rem;
+        }
     }
 
     &__stat {
         text-align: center;
+
         &--figure {
             font-size: 4.5rem;
             font-weight: 200;
             color: $color-white;
+
+            @media only screen and (max-width: $bp-medium-small) {
+                font-size: 4rem;
+            }
         }
 
         &--title {
